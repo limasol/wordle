@@ -29,6 +29,11 @@ export type CharValue =
   | 'B'
   | 'N'
   | 'M'
+  | 'Đ'
+  | 'Ž'
+  | 'Š'
+  | 'Č'
+  | 'Ć'
 
 export const getStatuses = (
   guesses: string[]

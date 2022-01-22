@@ -58,24 +58,24 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    How to play
+                    Kako igrati?
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Guess the WORDLE in 6 tries. After each guess, the color
-                      of the tiles will change to show how close your guess was
-                      to the word.
+                      Pogodi riječ u 6 pokušaja. Nakon svakog pokušaja,
+                      boje na ploči će se promijeniti da ti pokažu koliko
+                      si blizu pravoj riječi.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="W" status="correct" />
-                      <Cell value="E" />
+                      <Cell value="P" status="correct" />
                       <Cell value="A" />
-                      <Cell value="R" />
-                      <Cell value="Y" />
+                      <Cell value="T" />
+                      <Cell value="K" />
+                      <Cell value="A" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter W is in the word and in the correct spot.
+                      Riječ sadrži slovo P i na pravom je mjestu.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
@@ -86,18 +86,18 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                       <Cell value="T" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter L is in the word but in the wrong spot.
+                      Riječ sadrži slovo L, ali je na pogrešnom mjestu.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="V" />
+                      <Cell value="M" />
+                      <Cell value="O" />
+                      <Cell value="T" />
+                      <Cell value="K" status="absent" />
                       <Cell value="A" />
-                      <Cell value="G" />
-                      <Cell value="U" status="absent" />
-                      <Cell value="E" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter U is not in the word in any spot.
+                      Riječ ne sadrži slovo K.
                     </p>
                   </div>
                 </div>

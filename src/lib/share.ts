@@ -2,14 +2,20 @@ import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 
 export const shareStatus = (guesses: string[]) => {
-  navigator.clipboard.writeText(
-    'Wordle (BOS)' +
-      solutionIndex +
-      ' ' +
-      guesses.length +
-      '/6\n\n' +
-      generateEmojiGrid(guesses)
-  )
+  let shareText = 'Wordle (BOS) ' +
+                  solutionIndex +
+                  ' ' +
+                  guesses.length +
+                  '/6\n\n' +
+                  generateEmojiGrid(guesses);
+  navigator.clipboard.writeText(shareText);
+
+  const shareData = {
+    // title: 'Wordle (BOS)',
+    text: shareText,
+    // url: 'https://elahmo.github.io/wordle'
+  }
+  navigator.share(shareData);
 }
 
 export const generateEmojiGrid = (guesses: string[]) => {

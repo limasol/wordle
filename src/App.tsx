@@ -28,6 +28,9 @@ function App() {
   const [shareComplete, setShareComplete] = useState(false)
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
+    if (loaded == null){
+      setIsInfoModalOpen(true);
+    }
     if (loaded?.solution !== solution) {
       return []
     }

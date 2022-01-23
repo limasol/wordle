@@ -66670,5 +66670,6 @@ export const VALIDGUESSES = [
   'zvuči',
   'zvuka',
   'zvuke',
-  'zvuku'
+  'zvuku',
+  'smoki'
 ]

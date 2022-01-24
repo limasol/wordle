@@ -77,7 +77,7 @@ export const WinModal = ({
                   </Dialog.Title>
                   <div className="mt-2">
                     <MiniGrid guesses={guesses} />
-                    <p className="text-sm text-gray-500">Svaka čast! 🎉</p>
+                    <p className="text-sm text-gray-500">Na mom bolovo! Svaka čast! 🎉</p>
                   </div>
                 </div>
               </div>

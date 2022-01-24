@@ -66671,5 +66671,6 @@ export const VALIDGUESSES = [
   'zvuka',
   'zvuke',
   'zvuku',
-  'smoki'
+  'smoki',
+  'glovo',
 ]

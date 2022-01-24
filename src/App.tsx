@@ -34,8 +34,12 @@ function App() {
     if (loaded?.solution !== solution) {
       return []
     }
-    if (loaded.guesses.includes(solution)) {
+    const gameWasWon = loaded.guesses.includes(solution)
+    if (gameWasWon) {
       setIsGameWon(true)
+    }
+    if (loaded.guesses.length === 6 && !gameWasWon) {
+      setIsGameLost(true)
     }
     return loaded.guesses
   })
@@ -63,7 +67,7 @@ function App() {
   }
 
   const onEnter = () => {
-    if (!(currentGuess.length === 5)) {
+    if (!(currentGuess.length === 5) && !isGameLost) {
       setIsNotEnoughLetters(true)
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
@@ -91,28 +95,14 @@ function App() {
       if (guesses.length === 5) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
-        return setTimeout(() => {
-          setIsGameLost(false)
-        }, 2000)
       }
     }
   }
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Alert message="Nedovoljno slova" isOpen={isNotEnoughLetters} />
-      <Alert message="Riječ ne postoji" isOpen={isWordNotFoundAlertOpen} />
-      <Alert
-        message={`Izgubio si, tražena riječ je ${solution}`}
-        isOpen={isGameLost}
-      />
-      <Alert
-        message="Rezultat kopiran, podijeli sa prijateljima"
-        isOpen={shareComplete}
-        variant="success"
-      />
       <div className="flex w-80 mx-auto items-center mb-4">
-        <h1 className="text-xl grow font-bold">Wordle (BOS)</h1>
+        <h1 className="text-xl grow font-bold">Wordle (BOS) 🇧🇦</h1>
         <InformationCircleIcon
           className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
@@ -157,11 +147,23 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
         O igri
       </button>
+
+      <Alert message="Nedovoljno slova" isOpen={isNotEnoughLetters} />
+      <Alert message="Riječ ne postoji" isOpen={isWordNotFoundAlertOpen} />
+      <Alert
+        message={`Izgubio si, tražena riječ je ${solution}`}
+        isOpen={isGameLost}
+      />
+      <Alert
+        message="Rezultat kopiran, podijeli sa prijateljima"
+        isOpen={shareComplete}
+        variant="success"
+      />
     </div>
   )
 }

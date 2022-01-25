@@ -3,7 +3,7 @@ export const WORDS = [
   'lopov',
   'olovo',
   'hljeb',
-  'potok',
+  'burek',
   'tepih',
   'petak',
   'momak',
@@ -11,4 +11,5 @@ export const WORDS = [
   'biber',
   'pasta',
   'smoki',
+  'potok',
 ]

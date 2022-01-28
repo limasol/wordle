@@ -6,6 +6,7 @@ export const WORDS = [
   'burek',
   'tepih',
   'petak',
+  'punac',
   'momak',
   'odžak',
   'biber',

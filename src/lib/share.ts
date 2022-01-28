@@ -6,9 +6,7 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(shareText);
 
   const shareData = {
-    title: 'Wordle (BOS)',
     text: shareText,
-    url: 'https://elahmo.github.io/wordle'
   }
   navigator.share(shareData);
 }

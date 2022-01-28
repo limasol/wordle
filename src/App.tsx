@@ -1,4 +1,4 @@
-import { InformationCircleIcon } from '@heroicons/react/outline'
+import { InformationCircleIcon, RefreshIcon } from '@heroicons/react/outline'
 import { ChartBarIcon } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -29,8 +29,8 @@ function App() {
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
-    if (loaded == null){
-      setIsInfoModalOpen(true);
+    if (loaded == null) {
+      setIsInfoModalOpen(true)
     }
     if (loaded?.solution !== solution) {
       return []
@@ -118,6 +118,10 @@ function App() {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-4">
         <h1 className="text-xl grow font-bold">Wordle (BOS) 🇧🇦</h1>
+        <RefreshIcon
+          className="h-6 w-6 cursor-pointer"
+          onClick={() => window.location.reload()}
+        />
         <InformationCircleIcon
           className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
@@ -165,7 +169,10 @@ function App() {
 
       <Alert message="Nedovoljno slova" isOpen={isNotEnoughLetters} />
       <Alert message="Riječ ne postoji" isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={`Izgubio si, tražena riječ je ${solution}`} isOpen={isGameLost} />
+      <Alert
+        message={`Izgubio si, tražena riječ je ${solution}`}
+        isOpen={isGameLost}
+      />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}

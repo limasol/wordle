@@ -16,8 +16,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="P" status="correct" />
         <Cell value="A" />
-        <Cell value="T" />
-        <Cell value="K" />
+        <Cell value="Ž" />
+        <Cell value="Ǌ" />
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500">
@@ -25,14 +25,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
-        <Cell value="L" status="present" />
-        <Cell value="O" />
-        <Cell value="T" />
+        <Cell value="S" />
+        <Cell value="E" />
+        <Cell value="Ǉ" status="present" />
+        <Cell value="A" />
+        <Cell value="K" />
       </div>
       <p className="text-sm text-gray-500">
-        Riječ sadrži slovo L, ali je na pogrešnom mjestu.
+        Riječ sadrži slovo Ǉ, ali je na pogrešnom mjestu.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">

@@ -66,7 +66,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key value="J" onClick={onClick} status={charStatuses['J']} />
         <Key value="K" onClick={onClick} status={charStatuses['K']} />
         <Key value="L" onClick={onClick} status={charStatuses['L']} />
-        <Key value="ǈ" onClick={onClick} status={charStatuses['ǈ']} />
+        <Key value="Ǉ" onClick={onClick} status={charStatuses['Ǉ']} />
         <Key value="Č" onClick={onClick} status={charStatuses['Č']} />
         <Key value="Ć" onClick={onClick} status={charStatuses['Ć']} />
       </div>
@@ -78,7 +78,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key value="V" onClick={onClick} status={charStatuses['V']} />
         <Key value="B" onClick={onClick} status={charStatuses['B']} />
         <Key value="N" onClick={onClick} status={charStatuses['N']} />
-        <Key value="ǋ" onClick={onClick} status={charStatuses['ǋ']} />
+        <Key value="Ǌ" onClick={onClick} status={charStatuses['Ǌ']} />
         <Key value="M" onClick={onClick} status={charStatuses['M']} />
         <Key value="Ž" onClick={onClick} status={charStatuses['Ž']} />
         <Key width={65.4} value="DELETE" onClick={onClick}>

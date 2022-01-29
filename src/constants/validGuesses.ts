@@ -46934,6 +46934,7 @@ export const VALIDGUESSES = [
   'prkci',
   'prkev',
   'prkfa',
+  'prkno',
   'prkos',
   'prkos',
   'prkra',

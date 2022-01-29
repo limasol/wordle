@@ -32,6 +32,7 @@ export type CharValue =
   | 'Ǌ'
   | 'M'
   | 'Đ'
+  | 'Ǆ'
   | 'Ž'
   | 'Š'
   | 'Č'

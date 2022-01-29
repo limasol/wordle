@@ -31,7 +31,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         onDelete()
       } else {
         const key = e.key.toUpperCase()
-        if (key.length === 1 && key >= 'A' && key <= 'Z') {
+        if (key.length === 1 && ((key >= 'A' && key <= 'Z') || key === 'Č' || key === 'Ć' || key === 'Š' || key === 'Ž' || key === 'Đ')) {
           onChar(key)
         }
       }
@@ -55,6 +55,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key value="P" onClick={onClick} status={charStatuses['P']} />
         <Key value="Š" onClick={onClick} status={charStatuses['Š']} />
         <Key value="Đ" onClick={onClick} status={charStatuses['Đ']} />
+        <Key value="Ǆ" onClick={onClick} status={charStatuses['Ǆ']} />
       </div>
       <div className="flex justify-center mb-1">
         <Key value="A" onClick={onClick} status={charStatuses['A']} />

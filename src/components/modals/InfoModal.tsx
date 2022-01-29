@@ -10,8 +10,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Kako igrati?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500">
-      Pogodi riječ u 6 pokušaja. Nakon svakog pokušaja, boje na ploči  
-      će se promijeniti da ti pokažu koliko si blizu pravoj riječi.
+        Pogodi riječ u 6 pokušaja. Nakon svakog pokušaja, boje na ploči će se
+        promijeniti da ti pokažu koliko si blizu pravoj riječi.
       </p>
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="P" status="correct" />
@@ -42,9 +42,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="K" status="absent" />
         <Cell value="A" />
       </div>
-      <p className="text-sm text-gray-500">
-        Riječ ne sadrži slovo K.
-      </p>
+      <p className="text-sm text-gray-500">Riječ ne sadrži slovo K.</p>
     </BaseModal>
   )
 }

@@ -2,13 +2,15 @@ import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
-  let shareText = `Wordle (BOS) ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n\n` + generateEmojiGrid(guesses);
-  navigator.clipboard.writeText(shareText);
+  let shareText =
+    `Wordle (BOS) ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n\n` +
+    generateEmojiGrid(guesses)
+  navigator.clipboard.writeText(shareText)
 
   const shareData = {
     text: shareText,
   }
-  navigator.share(shareData);
+  navigator.share(shareData)
 }
 
 export const generateEmojiGrid = (guesses: string[]) => {

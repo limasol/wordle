@@ -113,7 +113,7 @@ function App() {
       if (winningWord) {
         setStats(addStatsForCompletedGame(stats, guesses.length))
         plausible.trackEvent('gameWon', {
-          props: { guesses: `{guesses.length}`, word: currentGuess },
+          props: { guesses: `${guesses.length}`, word: currentGuess },
         })
         return setIsGameWon(true)
       }

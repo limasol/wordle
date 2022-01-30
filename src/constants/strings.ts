@@ -1,6 +1,12 @@
 export const WORDLE_TITLE = 'Wordle (BOS) 🇧🇦'
 
-export const WIN_MESSAGES = ['Svaka čast!', 'Super!', 'Odlično!', 'Ma bravo!', 'MA KO NAMA POGAĐA?!?!? 🤗']
+export const WIN_MESSAGES = [
+  'Svaka čast!',
+  'Super!',
+  'Odlično!',
+  'Ma bravo!',
+  'MA KO NAMA POGAĐA?!?!? 🤗',
+]
 export const GAME_COPIED_MESSAGE = 'Rezultat kopiran, podijeli sa prijateljima'
 export const ABOUT_GAME_MESSAGE = 'O igri'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Nedovoljno slova'

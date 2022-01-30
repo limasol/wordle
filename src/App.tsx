@@ -10,6 +10,7 @@ import { StatsModal } from './components/modals/StatsModal'
 import { WIN_MESSAGES } from './constants/strings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import Plausible from 'plausible-tracker'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
@@ -47,6 +48,10 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
 
+  const plausible = Plausible({
+    domain: 'elahmo.github.io/wordle',
+  })
+
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
   }, [guesses])
@@ -71,6 +76,7 @@ function App() {
   const onChar = (value: string) => {
     if (currentGuess.length < 5 && guesses.length < 6 && !isGameWon) {
       setCurrentGuess(`${currentGuess}${value}`)
+      plausible.trackEvent('char', { props: { char: value } })
     }
   }
 
@@ -91,6 +97,7 @@ function App() {
 
     if (!isWordInWordList(currentGuess)) {
       setIsWordNotFoundAlertOpen(true)
+      plausible.trackEvent('wordNotFound', { props: { word: currentGuess } })
       return setTimeout(() => {
         setIsWordNotFoundAlertOpen(false)
       }, ALERT_TIME_MS)
@@ -100,19 +107,26 @@ function App() {
 
     if (currentGuess.length === 5 && guesses.length < 6 && !isGameWon) {
       setGuesses([...guesses, currentGuess])
+      plausible.trackEvent('guess', { props: { char: currentGuess } })
       setCurrentGuess('')
 
       if (winningWord) {
         setStats(addStatsForCompletedGame(stats, guesses.length))
+        plausible.trackEvent('gameWon', {
+          props: { guesses: `{guesses.length}`, word: currentGuess },
+        })
         return setIsGameWon(true)
       }
 
       if (guesses.length === 5) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
+        plausible.trackEvent('gameLost', { props: { word: currentGuess } })
         setIsGameLost(true)
       }
     }
   }
+
+  plausible.trackPageview()
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">

@@ -107,7 +107,7 @@ function App() {
 
     if (currentGuess.length === 5 && guesses.length < 6 && !isGameWon) {
       setGuesses([...guesses, currentGuess])
-      plausible.trackEvent('guess', { props: { char: currentGuess } })
+      plausible.trackEvent('guess', { props: { word: currentGuess } })
       setCurrentGuess('')
 
       if (winningWord) {

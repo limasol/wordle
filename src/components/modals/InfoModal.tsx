@@ -9,7 +9,7 @@ type Props = {
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Kako igrati?" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         Pogodi riječ u 6 pokušaja. Nakon svakog pokušaja, boje na ploči će se
         promijeniti da ti pokažu koliko si blizu pravoj riječi.
       </p>
@@ -20,7 +20,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="Ǌ" />
         <Cell value="A" />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         Riječ sadrži slovo P i na pravom je mjestu.
       </p>
 
@@ -31,7 +31,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
         <Cell value="K" />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         Riječ sadrži slovo Ǉ, ali je na pogrešnom mjestu.
       </p>
 
@@ -42,7 +42,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="K" status="absent" />
         <Cell value="A" />
       </div>
-      <p className="text-sm text-gray-500">Riječ ne sadrži slovo K.</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">Riječ ne sadrži slovo K.</p>
     </BaseModal>
   )
 }

@@ -1,5 +1,6 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
+import { WORDLE_TITLE } from '../constants/strings'
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   let shareText =

@@ -10,6 +10,8 @@ export const WORDS = [
   'šǉiva',
   'momak',
   'biber',
+  'šećer',
+  'germa',
   'čičak',
   'pasta',
   'smoki',

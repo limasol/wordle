@@ -167,11 +167,11 @@ function App() {
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-4 mt-6">
-        <h1 className="text-xl grow font-bold dark:text-white">
+        <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {WORDLE_TITLE}
         </h1>
         <SunIcon
-          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => handleDarkMode(!isDarkMode)}
         />
         <RefreshIcon
@@ -179,11 +179,11 @@ function App() {
           onClick={() => window.location.reload()}
         />
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>

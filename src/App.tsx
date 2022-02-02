@@ -164,8 +164,6 @@ function App() {
     }
   }
 
-  plausible.trackPageview()
-
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-4 mt-6">

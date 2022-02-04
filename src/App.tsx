@@ -222,6 +222,7 @@ function App() {
       >
         {ABOUT_GAME_MESSAGE}
       </button>
+      <p className="text-gray-600 text-center">Wordle - Bosanski jezik</p>
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert

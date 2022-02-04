@@ -165,8 +165,8 @@ function App() {
   }
 
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div className="flex w-80 mx-auto items-center mb-4 mt-6">
+    <div className="py-2 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="flex w-80 mx-auto items-center mb-4 mt-4">
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {WORDLE_TITLE}
         </h1>
@@ -217,7 +217,7 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+        className="mx-auto mt-4 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
         {ABOUT_GAME_MESSAGE}

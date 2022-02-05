@@ -2,7 +2,7 @@ export const WORDLE_TITLE = 'Wordle (BOS) 🇧🇦'
 
 export const WIN_MESSAGES = [
   'Svaka čast! 🥳',
-  'Super!' 🎉,
+  'Super! 🎉',
   'Odlično! 😍',
   'Ma bravo! 🎉',
   'MA KO NAMA POGAĐA?!?!? 🤗',

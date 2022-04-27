@@ -95,4 +95,9 @@ export const WORDS = [
   'remek',
   'glava',
   'feǌer',
+  'sekta',
+  'toraǌ',
+  'bedem',
+  'nasip',
+  'kupus',
 ]

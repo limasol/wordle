@@ -199,4 +199,5 @@ export const WORDS = [
   'šetǌa',
   'tepih',
   'bunda',
+  'gužva',
 ]

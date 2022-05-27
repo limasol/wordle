@@ -27,7 +27,6 @@ export const WORDS = [
   'suluk',
   'softa',
   'selam',
-  'israa',
   'sabur',
   'resul',
   'nebij',
@@ -47,4 +46,10 @@ export const WORDS = [
   'gusul',
   'kader',
   'jekin',
+  'akšam',
+  'sijam',
+  'jusuf',
+  'šuajb',
+  'jakub',
+  'iblis',
 ]
